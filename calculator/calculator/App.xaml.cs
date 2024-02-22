@@ -19,7 +19,7 @@ namespace calculator
             Application.Current.PageDisappearing += PageDisappearing;
 
             CrossNewRelicClient.Current.HandleUncaughtException();
-            CrossNewRelicClient.Current.TrackShellNavigatedEvents()
+            CrossNewRelicClient.Current.TrackShellNavigatedEvents();
       // Set optional agent configuration
       // Options are: crashReportingEnabled, loggingEnabled, logLevel, collectorAddress, crashCollectorAddress
       AgentStartConfiguration agentConfig = new AgentStartConfiguration(true, true, LogLevel.INFO, "mobile-collector.newrelic.com", "mobile-crash.newrelic.com");
@@ -27,7 +27,7 @@ namespace calculator
             {
                 //CrossNewRelicClient.Current.Start("<APP-TOKEN-HERE>");
                 // Start with optional agent configuration
-                CrossNewRelicClient.Current.Start("<APP-TOKEN-HERE", agentConfig);
+                CrossNewRelicClient.Current.Start("AA29da6c1ce8f939bd5f9759aa3a679a2c4674efcc-NRMA", agentConfig);
             }
             else if (Device.RuntimePlatform == Device.iOS)
             {
